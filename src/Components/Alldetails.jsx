@@ -6,8 +6,10 @@ const Alldetails = ({userprofile,username,email,role,availability,lastused,edit,
         <>
         <div className=" px-3.5 text-gray-400 border-b-1 border-gray-700 text-sm p-2">
             <div className=" grid grid-cols-5 items-center"> 
-                <div className="flex gap-3 justify-start pplace-items center">
-                    <img className=" rounded-4xl" src={userprofile} alt="" srcset=""/>
+                <div className="flex gap-3 justify-start place-items center">
+                    <div className=" place-content-center text-4xl">
+                        {userprofile}
+                    </div>
                     <div className="grid gap-0">
                         <div>{username}</div>
                         <div>{email}</div>

@@ -3,30 +3,37 @@ import Sidebar from '../Components/Sidebar.jsx'
 import Boxcomp from '../Components/Boxcomp.jsx'
 import Recentproducts from '../Components/Recentproducts.jsx'
 import Other from '../Components/Other.jsx'
-import Alldetails from '../Components/Alldetails.jsx'
 import Overview from '../Components/Overview.jsx'
 import { useContext } from 'react'
 import ThemeContext from '../Contexts/ThemeContext.jsx'
-
-
+import { useNavigate } from 'react-router-dom'
+import { FaCube } from "react-icons/fa";
+import { LuUsersRound } from "react-icons/lu";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { TiWarningOutline } from "react-icons/ti";
 function Dashboard () { 
     const {Theme} = useContext(ThemeContext)
+    const productpage =useNavigate()
+
+    const toproductpage=()=>{
+      useNavigate('../pages/Products')
+    }
 
   return (
 
-    <div className={`w-full flex ${Theme==="dark"?"bg-gray-800":"bg-white- text-black"}`}>
+    <div className={`w-full flex ${Theme==="dark"?"bg-gray-800 text-white":"bg-white- text-black"}`}>
       <div className='h-screen'>
         <Sidebar/>
       </div>
       <div>
         <HeaderComp/>
-        <div className={`grid gap-5 pt-6 ${Theme==="dark"?"bg-gray-800":"bg-white-100 text-black"} `}>
+        <div className={`grid gap-5 pt-6 ${Theme==="dark"?"bg-gray-900":"bg-white-100 text-black"} `}>
           <Overview/>
-          <div className="flex justify-evenly rounded p-4">
-            <Boxcomp text="Total Users" value="130" img="/userIcon.JPG"/>
-            <Boxcomp text="Total Products" value="304" img="/productIcon.JPG"/>
-            <Boxcomp text="Total Assignments" value="50" img="/assignmentIcon.JPG"/>
-            <Boxcomp text="Total Assignments" value="50" img="/assignmentIcon.JPG"/>
+          <div className="flex justify-evenly rounded p-5 gap-2">
+            <Boxcomp text="Total Users" value="130"img={<LuUsersRound/>}/>
+            <Boxcomp text="Total Products" value="304" img={<FaCube/>}/>
+            <Boxcomp text="Assignments" value="50" img={<IoMdCheckmarkCircleOutline/>}/>
+            <Boxcomp text="UnAssigned Assignments" value="50" img={<TiWarningOutline/>}/>
           </div>  
           <div className='ml-4 grid border-1 border-gray-400 rounded-xl '>
             <div className='border-b-1 border-gray-400 mb-5'>
@@ -69,7 +76,7 @@ function Dashboard () {
             userprofile="/userIcon.JP"
             username = "John DOe"
             email ="john Doe"
-            availability ="in -stcok"
+            availability ="in -stock"
             lastused="2 hours ago "
             edit ="edit"
             del ="del"

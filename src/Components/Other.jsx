@@ -1,5 +1,6 @@
 import React from "react"
 import Alldetails from "./Alldetails"
+import { FaUserCircle } from "react-icons/fa";
 
 const Other = () =>{
     return (
@@ -18,7 +19,7 @@ const Other = () =>{
                 <div>ACTIONS</div>
             </div>
             <Alldetails
-                userprofile="profile3.JPG"
+                userprofile={<FaUserCircle />}
                 username = "John DOe"
                 email ="john Doe"
                 role="manager"
@@ -28,7 +29,7 @@ const Other = () =>{
                 del ="del"
             />
             <Alldetails
-                userprofile="profile3.JPG"
+                userprofile={<FaUserCircle />}
                 username = "John DOe"
                 email ="john Doe"
                 role="manager"
@@ -38,7 +39,7 @@ const Other = () =>{
                 del ="del"
             />
             <Alldetails
-                userprofile="profile3.JPG"
+                userprofile={<FaUserCircle />}
                 username = "John DOe"
                 email ="john Doe"
                 role="manager"
@@ -48,7 +49,7 @@ const Other = () =>{
                 del ="del"
             />
             <Alldetails
-                userprofile="profile3.JPG"
+                userprofile={<FaUserCircle />}
                 username = "John DOe"
                 email ="john Doe"
                 role="manager"
@@ -58,7 +59,7 @@ const Other = () =>{
                 del ="del"
             />
             <Alldetails
-                userprofile="profile3.JPG"
+                userprofile={<FaUserCircle />}
                 username = "John DOe"
                 email ="john Doe"
                 role="manager"
@@ -68,7 +69,7 @@ const Other = () =>{
                 del ="del"
             />
             <Alldetails
-                userprofile="profile3.JPG"
+                userprofile={<FaUserCircle />}
                 username = "John DOe"
                 email ="john Doe"
                 role="manager"
@@ -77,7 +78,7 @@ const Other = () =>{
                 edit ="edit"
                 del ="del"
             />
-            
+           
         </div>
     )
 }

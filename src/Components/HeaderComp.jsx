@@ -1,3 +1,9 @@
+
+import { IoSunnyOutline } from "react-icons/io5";
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaRegBell } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
+
 import { useContext } from "react"
 import ImageIcons from "./ImageIcons"
 import ThemeContext from "../Contexts/ThemeContext"
@@ -9,25 +15,25 @@ const HeaderComp = () =>{
     return(
 
         <>
-            <header className="flex justify-between pl-10 pr-30 pt-3 pb-3 " >
+            <header className="flex justify-between pl-10 pr-30 pt-3 pb-3" >
                 <div>
                     <h1 className="font-bold text-amber-50">Dashboard</h1>
                     <p>welcome Back, Admin</p>
                 </div>
                 <div className=" text-x text-zinc-300 flex md:gap-8 place-items-center">
                     <ImageIcons
-                        icons = "/themeIcon.JPG"
+                        icons ={<IoSunnyOutline />}
                         onClick = {toggleTheme} 
                     />    
                     <ImageIcons
-                        icons = "/settingIcon.JPG"
+                        icons = {<IoSettingsOutline />}
                     />    
                     <ImageIcons
-                        icons = "/bellIcon.JPG"
+                        icons = {<FaRegBell />}
                     />    
                     <p>Admin@ihuza.com</p>
                     <ImageIcons
-                        icons = "/profileIcon.JPG"
+                        icons = {<FaUserCircle />}
                     />
                 </div>
             </header>

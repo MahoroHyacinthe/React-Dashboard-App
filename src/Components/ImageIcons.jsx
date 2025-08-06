@@ -1,11 +1,12 @@
 const ImageIcons =({icons, onClick})=>{
 
 
-    return (
-        
-        <>
-            <img onClick={onClick} className="rounded-4xl cursor-pointer" src={icons} alt="" srcset="" />
-        </>
+    return (        
+    
+            <div onClick={onClick} className="cursor-pointer">
+                {icons}
+            </div>
+    
     )
 
 

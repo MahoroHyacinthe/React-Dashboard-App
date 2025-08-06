@@ -1,15 +1,20 @@
 import React, { useContext, useState } from "react"
+import ThemeContext from "../Contexts/ThemeContext"
 
-const Usercomp = ({icon,type,num}) =>{
+const Usercomp = ({icon,type,num,className}) =>{
+
+    const {Theme} =useContext(ThemeContext)
 
     return(
 
-        <div className=" p-2 flex justify-between ">
-            <div className="flex gap-2">
-                <img className="rounded-4xl" src={icon} alt="" />
+        <div className={`p-4 rounded-2xl flex justify-between ${Theme==="dark"?"bg-gray-800":"bg-white- text-black"} `}>
+            <div className="flex gap-4 place-content-center">
+                <div className="place-content-center ">
+                    {icon}
+                </div>
                 <h1>{type}</h1>
             </div>
-            <div className=" rounded-xl p-2 bg-gray-600">
+            <div className={className}>
                 {num}
             </div>
         </div>
