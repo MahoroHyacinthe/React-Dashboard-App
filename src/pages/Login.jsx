@@ -28,9 +28,16 @@ const Login = () =>{
                             onChange ="onChange"
                                                 />
                         <Input
-                            label="Password: "
+                            label="Email:"
                             name="text"
-                            type="text"
+                            type="Email"
+                            className="bg-gray-200 rounded  text-black p-2 "
+                            onChange ="onChange"
+                                                />
+                        <Input
+                            label="Password:"
+                            name="text"
+                            type="Password"
                             className="bg-gray-200 rounded  text-black p-2 "
                             onChange ="onChange"
                                                 />

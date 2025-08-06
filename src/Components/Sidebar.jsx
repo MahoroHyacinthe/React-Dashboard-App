@@ -13,7 +13,16 @@ import ThemeContext from "../Contexts/ThemeContext";
 
 const Sidebar = () =>{
     
-        const {Theme} = useContext(ThemeContext)  
+        const {Theme} = useContext(ThemeContext) 
+        const navigation = useNavigate()
+
+        const toUserspage = () =>{
+            navigation("../Users")
+        }
+        const toProductPage=()=>{
+            navigation ("../Products")
+        }
+
   
     return(
 
@@ -30,12 +39,14 @@ const Sidebar = () =>{
                     type = "Dashboard"
                     />
                     <Usercomp
+                    onClick={toUserspage}
                     icon ={<FaUserGroup />}
                     type = "Users"
                     num ="130"
                     className={`rounded-3xl font-medium ${Theme==="dark"?"bg-gray-600":"bg-white- text-black"}`}
                     />
                     <Usercomp
+                    onClick={toProductPage}
                     icon = {<BsBoxSeam />}
                     type = "Products"
                     num ="356"
