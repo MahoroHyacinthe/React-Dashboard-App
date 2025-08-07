@@ -1,13 +1,22 @@
+import Sidebar from "../Components/Sidebar";
 import Alldetails from "../Components/Alldetails"
 import { FaUserCircle } from "react-icons/fa";
-
+import { useContext } from "react";
+import ThemeContext from "../Contexts/ThemeContext";
 export const Users =()=>{
-    return (
-        <div className="h-screen bg-gray-800">
 
-            <div className="bg-blue-800 p-6">
-                <h1 className="text-3xl text-white font-bold" >Users</h1>
-            </div>
+    const {Theme} = useContext(ThemeContext)
+
+    return (
+        <div className="h-screen bg-gray-700">
+
+            <header className="pb-2">
+
+                <Sidebar
+                    className={`pb-5 flex items-center justify-between  w-full pl-7 pt-6  ${Theme==="dark"?"bg-gray-800 text-gray-300 border-gray-500 ":"bg-white-100 text-black"}`}
+                    layouts={"flex place-content-end gap-5 px-7"}
+                    />
+            </header>
             <div className=" pt-2 bg-gray-900">
                 <Alldetails
                     userprofile={<FaUserCircle />}

@@ -23,7 +23,10 @@ function Dashboard () {
 
     <div className={`w-full flex ${Theme==="dark"?"bg-gray-800 text-white":"bg-white- text-black"}`}>
       <div className='h-screen'>
-        <Sidebar/>
+        <Sidebar
+        className={` h-200 flex flex-col  w-70 pl-7 pt-6  ${Theme==="dark"?"bg-gray-800 text-gray-300 border-gray-500 ":"bg-white-100 text-black"}`}
+        layouts={" pt-10 gap gap "}
+        />
       </div>
       <div>
         <HeaderComp/>

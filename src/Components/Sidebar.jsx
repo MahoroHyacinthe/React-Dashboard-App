@@ -11,7 +11,7 @@ import { useContext } from "react";
 import ThemeContext from "../Contexts/ThemeContext";
 
 
-const Sidebar = () =>{
+const Sidebar = ({className,layouts}) =>{
     
         const {Theme} = useContext(ThemeContext) 
         const navigation = useNavigate()
@@ -26,14 +26,14 @@ const Sidebar = () =>{
   
     return(
 
-            <div className={` h-200 flex flex-col  w-70 pl-7 pt-6  ${Theme==="dark"?"bg-gray-800 text-gray-300 border-gray-500 ":"bg-white-100 text-black"}`}>
+            <div className={className}>
                 <div className=" flex gap-3">
                     <div className="bg-blue-500 p-4 rounded-2xl place-content-center"><FaCube/></div>
                     <div>
                         <h1 className="font-bold text-white">iHUZA</h1>
                         INVENTORY</div>       
                 </div>
-                <div className=" pt-10 grid gap ">
+                <div className={layouts}>
                     <Usercomp
                     icon ={<MdLaptop />}
                     type = "Dashboard"
