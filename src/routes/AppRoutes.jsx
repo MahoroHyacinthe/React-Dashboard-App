@@ -8,6 +8,7 @@ import { Users } from "../pages/Users";
 import { Products } from "../pages/products";
 
 
+
 const AppRoutes =()=>{
     return(
 
@@ -16,6 +17,7 @@ const AppRoutes =()=>{
             <Route path = "/Login" element ={<Login/>}/>
             <Route path = "/Products" element ={<Products/>}/>
             <Route path = "/Users" element ={<Users/>}/>
+
         </Routes>
     )   
 }

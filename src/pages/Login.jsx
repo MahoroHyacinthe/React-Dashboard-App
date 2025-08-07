@@ -41,8 +41,6 @@ const Login = () =>{
 
             if(Object.keys(formErrors).length===0){
                 
-                localStorage.setItem("loggedUser",JSON.stringify(formData))
-                
                 handleTab()
                 
             }
