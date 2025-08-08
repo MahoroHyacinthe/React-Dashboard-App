@@ -9,14 +9,14 @@ const Other = () =>{
     const {Theme} = useContext(ThemeContext)
 
     return (
-        <div classzName="grid m-5">
-        <div className=" grid text-amber-50 rounded-t-2xl p-5">
-            <div className={`flex justify-between  ${Theme==="dark"?"bg-gray-800 p":"bg-white-100 text-black"}`}>
-                <div>users</div>
-                <botton className =" bg-blue-500 p-2 text rounded-xl">Add User</botton>
+        <div classzName="">
+            <div className="grid text-amber-50 rounded-t-2xl ml-5 mr-5">
+                <div className={`flex justify-between ${Theme==="dark"?"bg-gray-800 p-4 rounded-t-2xl":"bg-white p-4 text-black"}`}>
+                    <div>users</div>
+                    <botton className =" bg-blue-500 p-2 text rounded-xl">Add User</botton>
+                </div>
             </div>
-        </div>
-            <div className={`text-gray-300 grid grid-cols-5 p-4 text-xs ${Theme==="dark"?"bg-gray-800 p-3":"bg-white-100 text-black"}`}>
+            <div className={`grid grid-cols-5 text-xs ml-5 mr-5 ${Theme==="dark"?"bg-gray-700  p-3 px-5 rounded-5xl":"bg-gray-300 p-5 text-black"}`}>
                 <div>USER</div>
                 <div>ROLE</div>
                 <div>STATUS</div>
@@ -83,7 +83,6 @@ const Other = () =>{
                 edit ="edit"
                 del ="del"
             />
-           
         </div>
     )
 }

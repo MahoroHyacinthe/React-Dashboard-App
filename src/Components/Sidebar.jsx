@@ -22,6 +22,9 @@ const Sidebar = ({className,layouts}) =>{
         const toProductPage=()=>{
             navigation ("../Products")
         }
+        const todashboard=()=>{
+            navigation ("/")
+        }
 
   
     return(
@@ -35,6 +38,7 @@ const Sidebar = ({className,layouts}) =>{
                 </div>
                 <div className={layouts}>
                     <Usercomp
+                    onClick={todashboard}
                     icon ={<MdLaptop />}
                     type = "Dashboard"
                     />
