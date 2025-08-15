@@ -1,21 +1,20 @@
-
-import React, { useState, useContext } from 'react'
+import React,{ useState } from 'react'
 
 
 const ProductContext =React.createContext()
 
-export  const ProductContextProvider = ({children})=>{
+export const ProductContextProvider = ({children})=>{
 
-    const [product,setProduct] = useState(0)
+    const [Product,setProduct] = useState(0)
 
     const productAdded = () =>{
         
-        setProduct((prods)=> prods + 1)
+        setProduct( Product + 1)
     } 
     
     return (
         
-        <ProductContext.Provider value={{ product, productAdded }}>
+        <ProductContext.Provider value={{ Product, productAdded }}>
             {children}
         </ProductContext.Provider>      
 )

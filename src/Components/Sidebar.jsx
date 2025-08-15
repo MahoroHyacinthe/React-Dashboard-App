@@ -9,10 +9,13 @@ import Usercomp from "./Usercomp"
 import { useNavigate } from "react-router-dom"
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ThemeContext";
-
+import UserContext from "../Contexts/UserContext";
+import ProductContext from "../Contexts/ProductContext";
 
 const Sidebar = ({className,layouts}) =>{
     
+        const {Product} = useContext(ProductContext)
+        const {User} = useContext(UserContext)
         const {Theme} = useContext(ThemeContext) 
         const navigation = useNavigate()
 
@@ -46,14 +49,14 @@ const Sidebar = ({className,layouts}) =>{
                     onClick={toUserspage}
                     icon ={<FaUserGroup />}
                     type = "Users"
-                    num ="130"
+                    num ={User}
                     className={`rounded-3xl font-medium ${Theme==="dark"?"bg-gray-600":"bg-white- text-black"}`}
                     />
                     <Usercomp
                     onClick={toProductPage}
                     icon = {<BsBoxSeam />}
                     type = "Products"
-                    num ="356"
+                    num ={Product}
                      className={`rounded-3xl font-medium ${Theme==="dark"?"bg-gray-600":"bg-white- text-black"}`}
                     />
                     <Usercomp
